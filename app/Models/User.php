@@ -49,6 +49,7 @@ class User extends Authenticatable
 
     public function setTitleAttribute($value){
         $this->attributes['title']=$value;
+        // Fill with title and convert to slug format
         $this->attributes['slug']= Str::slug($value);
     }
 }
